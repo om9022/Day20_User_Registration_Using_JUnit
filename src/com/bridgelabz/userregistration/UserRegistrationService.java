@@ -52,7 +52,7 @@ public class UserRegistrationService {
 		checkValid(isMatched);
 		return isMatched;
 	}
-	
+
 	/*
 	 * @param checking result returned by matcher
 	 */
@@ -67,4 +67,5 @@ public class UserRegistrationService {
 			System.out.println("invalid");
 		}
 	}
+
 }
