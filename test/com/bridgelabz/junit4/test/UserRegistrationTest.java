@@ -1,5 +1,6 @@
 package com.bridgelabz.junit4.test;
 
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -9,9 +10,8 @@ import com.bridgelabz.userregistration.UserRegistrationException;
 import com.bridgelabz.userregistration.UserRegistrationException.ExceptionType;
 import com.bridgelabz.userregistration.UserRegistrationService;
 
-import com.bridgelabz.userregistration.UserRegistrationService;
-
-public class UserRegistrationTest {
+public class UserRegistrationTest 
+{
 	UserRegistrationService validator = new UserRegistrationService();
 	//checking conditions for first name
 	@Test
@@ -26,6 +26,18 @@ public class UserRegistrationTest {
 		assertFalse(validator.checkFirstName("Ab"));			
 	}
 
+	@Test
+	public void givenFirstName_WhenNumber_ShouldReturnFalse() 
+	{
+		assertFalse(validator.checkFirstName("a123"));			
+	}
+
+	@Test
+	public void givenFirstName_WhenSpecialCharcters_ShouldReturnFalse() 
+	{
+		assertFalse(validator.checkFirstName("ab@c"));			
+	}
+	
 	@Test
 	public void givenFirstName_WhenFirstNotInUpperCase_ShouldReturnFalse() 
 	{
@@ -49,6 +61,18 @@ public class UserRegistrationTest {
 	public void givenLastName_WhenFirstNotInUpperCase_ShouldReturnFalse() 
 	{
 		assertFalse(validator.checkLastName("abcd"));			
+	}
+
+	@Test
+	public void givenLastName_WhenNumber_ShouldReturnFalse() 
+	{
+		assertFalse(validator.checkLastName("ab12"));			
+	}
+	
+	@Test
+	public void givenLastName_WhenSpecialCharacter_ShouldReturnFalse() 
+	{
+		assertFalse(validator.checkLastName("abcd@"));			
 	}
 	
 	//checking conditions for email

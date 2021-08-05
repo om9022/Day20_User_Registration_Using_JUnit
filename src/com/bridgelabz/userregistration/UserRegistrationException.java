@@ -2,6 +2,7 @@ package com.bridgelabz.userregistration;
 
 public class UserRegistrationException extends Exception {
 
+
 	public enum ExceptionType
 	{
 		ENTERED_NULL,ENTERED_EMPTY
@@ -12,5 +13,6 @@ public class UserRegistrationException extends Exception {
 	public UserRegistrationException(ExceptionType type,String message) {
 		super(message);
 		this.type = type;
+	}
 	}
 }
