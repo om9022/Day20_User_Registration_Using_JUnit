@@ -3,7 +3,6 @@ package com.bridgelabz.userregistration;
 import java.util.regex.Pattern;
 
 public class UserRegistrationService {
-
 	/**
 	 * @param method to check first name 
 	 */
@@ -52,7 +51,7 @@ public class UserRegistrationService {
 		checkValid(isMatched);
 		return isMatched;
 	}
-
+	
 	/*
 	 * @param checking result returned by matcher
 	 */

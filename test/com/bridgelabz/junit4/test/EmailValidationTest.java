@@ -16,14 +16,14 @@ public class EmailValidationTest
 {
 	private String email;
 	private boolean expectedResult;
-
+	
 	public EmailValidationTest(String email, boolean expectedResult) 
 	{
 		super();
 		this.email = email;
 		this.expectedResult = expectedResult;
 	}
-
+	
 	@Parameterized.Parameters
 	public static Collection<Object[]> input()
 	{
@@ -51,9 +51,9 @@ public class EmailValidationTest
 			{"abc@abc@gmail.com",false},
 			{"abc@gmail.com.1a",false},
 			{"abc@gmail.com.aa.au",false},
-		});
+			});
 	}
-
+	
 	@Test
 	public void emailTest()
 	{
