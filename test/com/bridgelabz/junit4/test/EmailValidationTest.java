@@ -60,4 +60,5 @@ public class EmailValidationTest
 		UserRegistrationService checkEmail = new UserRegistrationService();
 		assertEquals(expectedResult,checkEmail.checkEmailAddress(email));
 	}
+	
 }
